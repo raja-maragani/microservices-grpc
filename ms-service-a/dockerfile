@@ -1,0 +1,4 @@
+FROM adoptopenjdk/openjdk11:alpine-jre
+COPY target/ms-service-a-0.0.1-SNAPSHOT.jar ../ms-service-a.jar
+ENTRYPOINT ["java","-jar","/ms-service-a.jar"]
+EXPOSE 6565

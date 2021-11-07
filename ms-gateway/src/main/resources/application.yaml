@@ -1,0 +1,10 @@
+server:
+  port: 8080
+grpc:
+  client:
+    ms-service-a:
+      address: static://ms-service-a:6565
+      negotiationType: plaintext
+    ms-service-b:
+      address: static://ms-service-b:6566
+      negotiationType: plaintext
