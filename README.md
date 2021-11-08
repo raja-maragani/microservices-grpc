@@ -11,9 +11,9 @@ microservices-grpc is a Microservice architecture-based application. It has two 
  microservices-grpc's microservices generate application logs and those are visible through the Kibana.
  
 
-# Application connectivity
+# Application Overview Picture
 
-![enter image description here](https://www.integrify.com/site/assets/files/2636/process-flow.png)
+![Overview picture](https://github.com/raja-maragani/microservices-grpc/blob/main/images/Overview.png)
 
 ## Build and Run
 ### Prerequsit
@@ -22,6 +22,9 @@ Java 8 +
 Maven
 ### Clone application 
 git clone https://github.com/raja-maragani/microservices-grpc.git
+
+### Application Structure
+![Application structure picture](https://github.com/raja-maragani/microservices-grpc/blob/main/images/ProjectStructure.JPG)
 
 ### Build application 
 Run the below maven command on the microservices-grpc
@@ -77,6 +80,9 @@ The **GatewayGraphQLService** loads the greetings.graphql schema. We implemented
 |localhost:8080/api|{ helloWorldSB { greetings } }            |POST           |200           |{helloWorldSB={greetings=Hello-World! from Service B}}           |Service A and Servive B up and running           |
 |localhost:8080/api|{ helloWorldSC { greetings } }            |POST           |400           |Bad Service Request.           |Service C is not there           |
 |localhost:8080/api|{ helloWorldSA { greetings } }            |POST           |500           |Service Down. Please try after some time           |Service A - not running           |
+
+Example postman call:
+![Postman picture](https://github.com/raja-maragani/microservices-grpc/blob/main/images/postmanscreen.JPG)
 
 ## Logger format
 
@@ -162,3 +168,5 @@ Dependencies:
 # Kibana logs 
 Kibana connecting to the elasticsearch index to fetch the logger information.
 Our scenario Kibana discovery the **logstash-*** for fetch the logs.
+
+![Kibana picture](https://github.com/raja-maragani/microservices-grpc/blob/main/images/Kibana.JPG)
