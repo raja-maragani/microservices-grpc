@@ -14,7 +14,7 @@ public class MsServiceA extends MsServiceAGrpc.MsServiceAImplBase{
     @Override
     public void helloWorld(InputA request, StreamObserver<OutputA> responseObserver) {
         log.info("MsServiceA request: helloWorld started");
-        responseObserver.onNext(OutputA.newBuilder().setQuery("Service A Hello-World").build());
+        responseObserver.onNext(OutputA.newBuilder().setQuery("Hello-World! from Service A").build());
         responseObserver.onCompleted();
         log.info("MsServiceA request: helloWorld completed");
     }

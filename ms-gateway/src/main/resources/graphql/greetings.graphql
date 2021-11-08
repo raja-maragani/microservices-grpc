@@ -1,0 +1,12 @@
+schema {
+ query: Query
+}
+
+type Query {
+ helloWorldSA: Greetings
+ helloWorldSB: Greetings
+}
+
+type Greetings {
+  greetings: String
+}
