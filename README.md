@@ -17,9 +17,9 @@ microservices-grpc is a Microservice architecture-based application. It has two 
 
 ## Build and Run
 ### Prerequsit
-Docker
-Java 8 +
-Maven
+- Docker
+- Java 8 +
+- Maven
 ### Clone application 
 git clone https://github.com/raja-maragani/microservices-grpc.git
 
@@ -35,7 +35,6 @@ Dockerfiles are available in the below 3 applications
  - ms-service-a 
  - ms-service-b
 
-SmartyPants converts ASCII punctuation characters into "smart" typographic punctuation HTML entities. For example:
 
 |        Application         |Dockerfile Path                          |Docker command                         |
 |----------------|-------------------------------|-----------------------------|
@@ -47,7 +46,7 @@ SmartyPants converts ASCII punctuation characters into "smart" typographic punct
 Which will create the docker latest image for our application
 
 ### docker-compose up
-Run the **docker-compose up** on the directory microservices-grpc
+Run the **docker-compose up** on the directory microservices-grpc. 
 The docker-compose.yml will up the below applications
 |        Application         |Port                          |Version                         |
 |----------------|-------------------------------|-----------------------------|
@@ -73,6 +72,8 @@ The **GatewayGraphQLService** loads the greetings.graphql schema. We implemented
     type Greetings {
       greetings: String
     }
+
+### Endpoints information
 
 |        Endpoint         |Input                          |Method type |Status | Output|  Comment| 
 |----------------|-------------------------------|-----------------------------|-----------------------------|-----------------------------|-----------------------------|
