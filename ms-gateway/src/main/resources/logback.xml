@@ -23,10 +23,14 @@
                     <pattern>
                         {
                         "trace": {
-                        "trace_id": "%mdc{X-B3-TraceId}",
-                        "span_id": "%mdc{X-B3-SpanId}",
-                        "parent_span_id": "%mdc{X-B3-ParentSpanId}",
-                        "exportable": "%mdc{X-Span-Export}"
+                        "trace_id":
+                        "%mdc{X-B3-TraceId}",
+                        "span_id":
+                        "%mdc{X-B3-SpanId}",
+                        "parent_span_id":
+                        "%mdc{X-B3-ParentSpanId}",
+                        "exportable":
+                        "%mdc{X-Span-Export}"
                         }
                         }
                     </pattern>

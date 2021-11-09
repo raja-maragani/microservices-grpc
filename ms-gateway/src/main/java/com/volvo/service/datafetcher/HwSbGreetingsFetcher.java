@@ -22,12 +22,12 @@ public class HwSbGreetingsFetcher implements DataFetcher<Greetings> {
 
     @Override
     public Greetings get(DataFetchingEnvironment environment) {
-        log.info("Service B request processing ... ");
-        log.debug("GraphQL redirected to Service B request and it is processing ... ");
+        log.info("ms-service-b request processing ... ");
+        log.debug("GraphQL redirected to ms-service-b request and it is processing ... ");
         InputB input = InputB.newBuilder().build();
         String greetingMessage = this.msb_blockingStub.helloWorld(input).next().getQuery();
-        log.info("Service B request processed successfully");
-        log.debug("Service B request processed successfully" + greetingMessage);
+        log.info("ms-service-b request processed successfully");
+        log.debug("ms-service-b request processed successfully" + greetingMessage);
         return new Greetings(greetingMessage);
     }
 }

@@ -20,6 +20,7 @@ microservices-grpc is a Microservice architecture-based application. It has two 
 - Docker
 - Java 8 +
 - Maven
+
 ### Clone application 
 git clone https://github.com/raja-maragani/microservices-grpc.git
 
@@ -36,11 +37,11 @@ Dockerfiles are available in the below 3 applications
  - ms-service-b
 
 
-|        Application         |Dockerfile Path                          |Docker command                         |
-|----------------|-------------------------------|-----------------------------|
-|ms-gateway|cd ms-gateway            |docker build --tag=ms-gateway:latest .            |
-|ms-service-a          |cd ms-service-a            |docker build --tag=ms-service-a:latest .            |
-|ms-service-b          |cd ms-service-b |docker build --tag=ms-service-b:latest .|
+|Application | Docker command |
+|----------------|-----------------------------|
+|ms-gateway | docker build --tag=ms-gateway:latest ms-gateway |
+|ms-service-a | docker build --tag=ms-service-a:latest ms-service-a |
+|ms-service-b | docker build --tag=ms-service-b:latest ms-service-b |
 
 
 Which will create the docker latest image for our application

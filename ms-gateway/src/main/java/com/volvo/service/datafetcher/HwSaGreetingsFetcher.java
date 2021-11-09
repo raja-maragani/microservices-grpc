@@ -23,13 +23,13 @@ public class HwSaGreetingsFetcher implements DataFetcher<Greetings> {
 
     @Override
     public Greetings get(DataFetchingEnvironment environment) throws StatusRuntimeException {
-        log.info("Service A request processing ... ");
-        log.debug("GraphQL redirected to Service A request and it is processing ... ");
+        log.info("ms-service-a request processing ... ");
+        log.debug("GraphQL redirected to ms-service-a request and it is processing ... ");
         InputA input = InputA.newBuilder().build();
         String greetingMessage;
         greetingMessage = this.ms_ablockingStub.helloWorld(input).next().getQuery();
-        log.info("Service B request processed successfully");
-        log.debug("Service B request processed successfully" + greetingMessage);
+        log.info("ms-service-a request processed successfully");
+        log.debug("ms-service-a request processed successfully" + greetingMessage);
         return new Greetings(greetingMessage);
     }
 }
