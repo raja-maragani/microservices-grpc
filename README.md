@@ -55,8 +55,8 @@ The docker-compose.yml will up the below applications
 |ms-service-a          |6565 (gRPC communication port)           |latest (0.0.1-SNAPSHOT)            |
 |ms-service-b          |6566 (gRPC communication port) |latest (0.0.1-SNAPSHOT)|
 |elasticsearch          |9200  |7.2.0|
-|logstash          |5044 |latest 7.2.0|
-|kibana          |5601 |latest 7.2.0|
+|logstash          |5044 |7.2.0|
+|kibana          |5601 |7.2.0|
 
 ## GraphQL
 The **GatewayGraphQLService** loads the greetings.graphql schema. We implemented the two queries.
@@ -111,8 +111,9 @@ The **MsGatewayExceptionHandler** will handle the application throw exceptions. 
 The GraphQL runtime wiring logic is placed in **GatewayGraphQLService**.
 This GatewayGraphQLService will do the runtime wiring(Map to the data fetcher) for our endpoints. 
 We implemented two queries and these two queries are mapped with Greetings data fetcher.
-helloWorldSA --> HwSaGreetingsFetcher
-helloWorldSB --> HwSbGreetingsFetcher
+
+- helloWorldSA --> HwSaGreetingsFetcher
+- helloWorldSB --> HwSbGreetingsFetcher
 
 
 # How gRPC working
@@ -147,7 +148,7 @@ Dependencies:
 
 
 **Followed the below steps**
-1.  Our application defined two services in  _.proto_ files (servicea.proto and serviceb.proto)
+1.  Our applications defined two services in  _.proto_ files (servicea.proto and serviceb.proto)
 2.  Generated server and client code using the protocol buffer compiler
 3.  Created the server application, implemented the generated service interfaces, and spawning the gRPC server
 4.  Created the client application, making RPC calls using generated stubs
